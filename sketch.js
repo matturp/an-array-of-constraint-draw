@@ -13,8 +13,11 @@ let comp;
 let capture;
 let overlay;
 
-var POSTER_W = 695;
-var POSTER_H = 850;
+// var POSTER_W = 695;
+// var POSTER_H = 850;
+
+var POSTER_W;
+var POSTER_H;
 
 var offsetX = 0;
 var offsetY = 0;
@@ -66,6 +69,9 @@ function preload(){
 function setup() {
   createCanvas(windowWidth - 50, windowHeight - 80);
   noCursor();
+	
+	POSTER_W = width/2;
+	POSTER_H = height;
 
   capture = createCapture(VIDEO);
   capture.hide();
